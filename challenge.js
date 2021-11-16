@@ -27,8 +27,25 @@ function readLine() {
  */
 
 function miniMaxSum(arr) {
-    // Write your code here
-
+    
+    let maxMinArr = [];
+    
+    for(let i=0; i<arr.length; i++){
+        
+        let sum = 0;
+        let elem = arr[i];
+    
+            for(let j=0; j < arr.length; j++){
+                
+                sum = sum + arr[j] ; 
+                
+                }
+            
+        maxMinArr.push(sum-elem); 
+    }
+   
+    console.log(Math.min(...maxMinArr),Math.max(...maxMinArr));
+    
 }
 
 function main() {
